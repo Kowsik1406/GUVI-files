@@ -1,0 +1,18 @@
+
+Task Description:
+
+Create a file with .txt extension (/home/demo.txt). Change the permission set of that file,
+so that any user can read it, group can read/write & owner can read/write/execute it.
+
+
+ubuntu@ip-172-31-11-101:~$ pwd
+/home/ubuntu
+ubuntu@ip-172-31-11-101:~$ ls
+my_folder  myfolder
+ubuntu@ip-172-31-11-101:~$ cd my_folder
+ubuntu@ip-172-31-11-101:~/my_folder$ touch demo.txt
+ubuntu@ip-172-31-11-101:~/my_folder$ ls -l demo.txt
+-rw-rw-r-- 1 ubuntu ubuntu 0 Jun  2 09:09 demo.txt
+ubuntu@ip-172-31-11-101:~/my_folder$ chmod 764 demo.txt
+ubuntu@ip-172-31-11-101:~/my_folder$ ls -l demo.txt
+-rwxrw-r-- 1 ubuntu ubuntu 0 Jun  2 09:09 demo.txt
