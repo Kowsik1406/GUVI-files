@@ -1,0 +1,69 @@
+ubuntu@ip-172-31-11-101:~$ pwd
+/home/ubuntu
+ubuntu@ip-172-31-11-101:~$ mkdir my_folder
+ubuntu@ip-172-31-11-101:~$ cd my_folder
+ubuntu@ip-172-31-11-101:~/my_folder$ pwd
+/home/ubuntu/my_folder
+ubuntu@ip-172-31-11-101:~/my_folder$ touch my_file.txt
+ubuntu@ip-172-31-11-101:~/my_folder$ vi my_file.txt
+ubuntu@ip-172-31-11-101:~/my_folder$ touch another_file.txt
+ubuntu@ip-172-31-11-101:~/my_folder$ vi another_file.txt
+ubuntu@ip-172-31-11-101:~/my_folder$ cat my_file.txt
+This is my_file.txt 
+first line
+ubuntu@ip-172-31-11-101:~/my_folder$ cat another_file.txt
+This is another_file.txt
+first line
+ubuntu@ip-172-31-11-101:~/my_folder$ cat another_file.txt >> my_file.txt
+ubuntu@ip-172-31-11-101:~/my_folder$ cat my_file.txt
+This is my_file.txt 
+first line
+This is another_file.txt
+first line
+ubuntu@ip-172-31-11-101:~/my_folder$ ls
+another_file.txt  my_file.txt
+ubuntu@ip-172-31-11-101:~/my_folder$ ls -l
+total 8
+-rw-rw-r-- 1 ubuntu ubuntu 36 Jun  2 07:49 another_file.txt
+-rw-rw-r-- 1 ubuntu ubuntu 68 Jun  2 07:49 my_file.txt
+ubuntu@ip-172-31-11-101:~/my_folder$ touch file{1..20}.txt
+ubuntu@ip-172-31-11-101:~/my_folder$ ls
+another_file.txt  file10.txt  file12.txt  file14.txt  file16.txt  file18.txt  file2.txt   file3.txt  file5.txt  file7.txt  file9.txt
+file1.txt         file11.txt  file13.txt  file15.txt  file17.txt  file19.txt  file20.txt  file4.txt  file6.txt  file8.txt  my_file.txt
+ubuntu@ip-172-31-11-101:~/my_folder$ mv file1.txt file1.yml
+ubuntu@ip-172-31-11-101:~/my_folder$ mv file2.txt file2.yml
+ubuntu@ip-172-31-11-101:~/my_folder$ mv file3.txt file3.yml
+ubuntu@ip-172-31-11-101:~/my_folder$ mv file4.txt file4.yml
+ubuntu@ip-172-31-11-101:~/my_folder$ mv file5.txt file5.yml
+ubuntu@ip-172-31-11-101:~/my_folder$ ls | head -5 
+another_file.txt
+file1.yml
+file10.txt
+file11.txt
+file12.txt
+ubuntu@ip-172-31-11-101:~/my_folder$ ls -lat
+total 16
+drwxrwxr-x 2 ubuntu ubuntu 4096 Jun  2 07:52 .
+-rw-rw-r-- 1 ubuntu ubuntu    0 Jun  2 07:51 file1.yml
+-rw-rw-r-- 1 ubuntu ubuntu    0 Jun  2 07:51 file10.txt
+-rw-rw-r-- 1 ubuntu ubuntu    0 Jun  2 07:51 file11.txt
+-rw-rw-r-- 1 ubuntu ubuntu    0 Jun  2 07:51 file12.txt
+-rw-rw-r-- 1 ubuntu ubuntu    0 Jun  2 07:51 file13.txt
+-rw-rw-r-- 1 ubuntu ubuntu    0 Jun  2 07:51 file14.txt
+-rw-rw-r-- 1 ubuntu ubuntu    0 Jun  2 07:51 file15.txt
+-rw-rw-r-- 1 ubuntu ubuntu    0 Jun  2 07:51 file16.txt
+-rw-rw-r-- 1 ubuntu ubuntu    0 Jun  2 07:51 file17.txt
+-rw-rw-r-- 1 ubuntu ubuntu    0 Jun  2 07:51 file18.txt
+-rw-rw-r-- 1 ubuntu ubuntu    0 Jun  2 07:51 file19.txt
+-rw-rw-r-- 1 ubuntu ubuntu    0 Jun  2 07:51 file2.yml
+-rw-rw-r-- 1 ubuntu ubuntu    0 Jun  2 07:51 file20.txt
+-rw-rw-r-- 1 ubuntu ubuntu    0 Jun  2 07:51 file3.yml
+-rw-rw-r-- 1 ubuntu ubuntu    0 Jun  2 07:51 file4.yml
+-rw-rw-r-- 1 ubuntu ubuntu    0 Jun  2 07:51 file5.yml
+-rw-rw-r-- 1 ubuntu ubuntu    0 Jun  2 07:51 file6.txt
+-rw-rw-r-- 1 ubuntu ubuntu    0 Jun  2 07:51 file7.txt
+-rw-rw-r-- 1 ubuntu ubuntu    0 Jun  2 07:51 file8.txt
+-rw-rw-r-- 1 ubuntu ubuntu    0 Jun  2 07:51 file9.txt
+-rw-rw-r-- 1 ubuntu ubuntu   68 Jun  2 07:49 my_file.txt
+drwxr-x--- 7 ubuntu ubuntu 4096 Jun  2 07:49 ..
+-rw-rw-r-- 1 ubuntu ubuntu   36 Jun  2 07:49 another_file.txt
