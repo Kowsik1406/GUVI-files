@@ -1,0 +1,37 @@
+#!/bin/bash
+response=$(curl -s -o /dev/null -w "%{http_code}" https://www.guvi.in)
+echo "HTTP status code is $response"
+echo
+if (($response==200));
+then
+        echo "SUCCESS & HTTP status code is: $response"
+else
+        echo "$response"
+fi
+
+-------------------------------------------------------------------
+
+ubuntu@ip-172-31-8-152:~/bashdir$ vi input.txt
+ubuntu@ip-172-31-8-152:~/bashdir$ cat input.txt
+Line 1
+Line 2
+Line 3
+Line 4
+Please welcome and give your best
+This line says welcome
+We will give
+welcome to give and learn
+ubuntu@ip-172-31-8-152:~/bashdir$ sed '5,${/welcome s/give/learning/g}' input.txt > temp.txt && mv temp.txt input.txt
+sed: -e expression #1, char 17: extra characters after command
+ubuntu@ip-172-31-8-152:~/bashdir$ sed '5,${/welcome s/give/learning/g}'input.txt > temp.txt && mv temp.txt input.txt
+sed: -e expression #1, char 17: extra characters after command
+ubuntu@ip-172-31-8-152:~/bashdir$ sed '5,$ {/welcome/ s/give/learning/g}' input.txt > temp.txt && mv temp.txt input.txt
+ubuntu@ip-172-31-8-152:~/bashdir$ cat input.txt
+Line 1
+Line 2
+Line 3
+Line 4
+Please welcome and learning your best
+This line says welcome
+We will give
+welcome to learning and learn
