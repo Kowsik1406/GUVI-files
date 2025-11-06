@@ -15,8 +15,8 @@ pipeline {
     }
     post {
         always {
-            emailtext(
-                to: 'kowsikvigrams2@gmail.com'
+            emailext(
+                to: 'kowsikvigrams2@gmail.com',
                 subject: "Jenkins Build: ${currentBuild.fullDisplayName} - ${currentBuild.currentResult}",
                 body: """Build URL: ${env.BUILD_URL}
 Result: ${currentBuild.currentResult}
